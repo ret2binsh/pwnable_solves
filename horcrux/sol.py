@@ -72,14 +72,7 @@ def main():
     navigate_menu(p)
     p.sendline(str(sum))
 
-    #p.interactive()
-    flag = p.recv(1024,timeout=.1)
-    for f in flag.split(b"\n"):
-        if b"Magic" in f:
-            print("Flag: Redacted")
-        else:
-            print(f.decode())
-
+    p.interactive()
 
 if __name__ == "__main__":
     main()
